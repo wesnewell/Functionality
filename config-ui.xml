@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+
+    <window name="iconimport">
+        <textarea name="name" from="basetextarea">
+            <area>45,22,1830,45</area>
+            <font>basemedium</font>
+            <align>hcenter</align>
+        </textarea>
+
+        <buttonlist name="icons">
+            <area>45,90,1860,832</area>
+            <buttonarea>0,0,1860,780</buttonarea>
+            <layout>grid</layout>
+            <spacing>5</spacing>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,450,90</area>
+                    <shape name="background">
+                        <area>0,0,450,90</area>
+                        <type>roundbox</type>
+                        <cornerradius>6</cornerradius>
+                        <fill style="gradient">
+                            <gradient start="#505050" end="#000000" alpha="200" direction="vertical" />
+                        </fill>
+                    </shape>
+                    <imagetype name="icon">
+                        <area>0,7,120,75</area>
+                        <preserveaspect>true</preserveaspect>
+                    </imagetype>
+                    <textarea name="buttontext">
+                        <area>135,7,300,75</area>
+                        <align>allcenter</align>
+                        <multiline>yes</multiline>
+                    </textarea>
+                </state>
+                <state name="selectedactive" from="active">
+                    <shape name="background">
+                        <fill style="gradient">
+                            <gradient start="#52CA38" end="#349838" alpha="255" />
+                        </fill>
+                    </shape>
+                </state>
+                <state name="selectedinactive" from="selectedactive">
+                    <shape name="background">
+                        <fill style="gradient">
+                            <gradient start="#52CA38" end="#349838" alpha="175" />
+                        </fill>
+                    </shape>
+                </state>
+            </statetype>
+            <statetype name="upscrollarrow">
+                <position>1725,795</position>
+                <state type="full">
+                    <imagetype name="upoff">
+                        <filename>shared/uparrow.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+            <statetype name="downscrollarrow">
+                <position>1770,795</position>
+                <state type="full">
+                    <imagetype name="dnoff">
+                        <filename>shared/downarrow.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+        </buttonlist>
+
+        <textarea name="status" from="basetextarea">
+            <area>45,825,900,37</area>
+        </textarea>
+
+        <textarea name="manuallabel" from="basetextarea">
+            <area>45,915,450,45</area>
+            <value>Search terms:</value>
+        </textarea>
+
+        <textedit name="manualsearch" from="basetextedit">
+            <position>45,964</position>
+        </textedit>
+
+        <button name="search" from="basebutton">
+            <position>660,957</position>
+            <value>Search</value>
+        </button>
+
+        <button name="skip" from="basebutton">
+            <position>930,957</position>
+            <value>Skip</value>
+        </button>
+
+    </window>
+
+    <window name="channeloverview">
+
+        <imagetype name="backimg">
+            <filename>background.png</filename>
+        </imagetype>
+              
+        <textarea name="pagetitle">
+            <area>30,7,855,60</area>
+            <font>baselarge</font>
+            <value>Channel Editor</value>
+        </textarea>
+
+        <shape name="list_background" from="basebackground">
+            <area>22,60,1785,540</area>
+        </shape>
+
+        <shape name="channum_column">
+            <area>76,63,120,534</area>
+            <fill color="#333333" alpha="180" />
+        </shape>
+
+        <shape name="sourcename_background">
+            <area>1282,63,435,534</area>
+            <fill color="#333333" alpha="180" />
+        </shape>
+
+        <buttonlist name="channels" from="basebuttonlist2">
+            <position>28,75</position>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <imagetype name="icon">
+                        <area>1687,0,90,37</area>
+                        <preserveaspect>true</preserveaspect>
+                    </imagetype>
+                    <textarea name="channum" from="buttontext">
+                        <area>48,1,120,36</area>
+                        <align>center</align>
+                    </textarea>
+                    <textarea name="name" from="buttontext">
+                        <area>180,1,1110,36</area>
+                    </textarea>
+                    <textarea name="sourcename" from="name">
+                        <area>1290,1,412,36</area>
+                    </textarea>
+                </state>
+                <state name="selectedactive" from="active">
+                    <imagetype name="icon">
+                        <area>1657,-27,120,90</area>
+                        <preserveaspect>true</preserveaspect>
+                    </imagetype>
+                </state>
+                <state name="selectedinactive" from="active" />
+            </statetype>
+            <statetype name="upscrollarrow">
+                <position>1785,0</position>
+            </statetype>
+            <statetype name="downscrollarrow">
+                <position>1785,465</position>
+            </statetype>
+        </buttonlist>
+
+        <textarea name="sortlabel" from="basetextarea">
+            <area>45,630,255,45</area>
+            <value>Sort Mode:</value>
+            <font>basesmall</font>
+        </textarea>
+
+        <buttonlist name="sorting" from="basewideselector">
+            <position>315,622</position>
+        </buttonlist>
+
+        <textarea name="sourcelabel" from="sortlabel">
+            <position>45,720</position>
+            <value>Video Source:</value>
+        </textarea>
+
+        <buttonlist name="source" from="basewideselector">
+            <position>315,712</position>
+        </buttonlist>
+
+        <button name="delete" from="basebutton">
+            <position>1125,712</position>
+            <value>Delete</value>
+        </button>
+
+        <textarea name="nochannumlabel" from="basetextarea">
+            <area>105,802,750,45</area>
+            <value>Hide channels without channel number</value>
+        </textarea>
+
+        <checkbox name="nochannum" from="basecheckbox">
+            <position>45,802</position>
+        </checkbox>
+
+        <button name="scan" from="basewidebutton">
+            <position>82,877</position>
+            <value>Channel Scan</value>
+        </button>
+
+        <button name="importicons" from="basewidebutton">
+            <position>562,877</position>
+            <value>Icon Download</value>
+        </button>
+
+        <button name="edittransport" from="basewidebutton">
+            <position>1050,877</position>
+            <value>Edit Transports</value>
+        </button>
+
+    </window>
+
+    <window name="languageselection">
+
+        <textarea name="countrylabel">
+            <font>baselarge</font>
+            <area>90,30,765,60</area>
+            <value>Country</value>
+            <align>allcenter</align>
+        </textarea>
+
+        <shape name="countrybackground" from="basebackground">
+            <area>60,97,825,825</area>
+        </shape>
+
+        <buttonlist name="countries">
+            <area>75,112,795,795</area>
+            <scrollstyle>center</scrollstyle>
+            <spacing>2</spacing>
+            <wrapstyle>selection</wrapstyle>
+            <buttonarea>0,0,100%,97%</buttonarea>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,100%,82</area>
+                    <shape name="buttonbackground">
+                        <area>0,0,100%,100%</area>
+                        <fill style="gradient">
+                            <gradient start="#505050" end="#000000" alpha="200" direction="vertical"  />
+                        </fill>
+                    </shape>
+                    <imagetype name="buttonimage">
+                        <area>7,10,90,60</area>
+                    </imagetype>
+                    <textarea name="buttontext">
+                        <area>105,0,90%,45</area>
+                        <font>basemedium</font>
+                        <cutdown>yes</cutdown>
+                        <align>left,vcenter</align>
+                    </textarea>
+                    <textarea name="nativecountry">
+                        <area>105,45,90%,30</area>
+                        <font>basesmallgrey</font>
+                        <cutdown>yes</cutdown>
+                        <align>left,vcenter</align>
+                    </textarea>
+                </state>
+                <state name="inactive" from="active" />
+                <state name="selectedactive" from="active">
+                    <shape name="buttonbackground">
+                        <fill style="gradient">
+                            <gradient start="#52CA38" end="#349838" alpha="255" />
+                        </fill>
+                    </shape>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <shape name="buttonbackground">
+                        <fill style="gradient">
+                            <gradient start="#52CA38" end="#349838" alpha="100" />
+                        </fill>
+                    </shape>
+                </state>
+            </statetype>
+            <statetype name="upscrollarrow">
+                <position>15,97%</position>
+                <state type="off">
+                    <imagetype name="upon">
+                        <filename>lb-uparrow-reg.png</filename>
+                    </imagetype>
+                </state>
+                <state type="full">
+                    <imagetype name="upoff">
+                        <filename>lb-uparrow-sel.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+            <statetype name="downscrollarrow">
+                <position>60,97%</position>
+                <state type="off">
+                    <imagetype name="dnon">
+                        <filename>lb-dnarrow-reg.png</filename>
+                    </imagetype>
+                </state>
+                <state type="full">
+                    <imagetype name="dnoff">
+                        <filename>lb-dnarrow-sel.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+            <helptext>Select the country in which you currently reside</helptext>
+        </buttonlist>
+
+        <textarea name="languagelabel" from="countrylabel">
+            <position>1020,30</position>
+            <value>Language</value>
+        </textarea>
+
+        <shape name="languagebackground" from="basebackground">
+            <area>990,97,825,825</area>
+        </shape>
+
+        <buttonlist name="languages" from="countries">
+            <area>1005,112,795,795</area>
+            <spacing>2</spacing>
+            <scrollstyle>center</scrollstyle>
+            <wrapstyle>selection</wrapstyle>
+            <buttonarea>0,0,100%,97%</buttonarea>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,100%,82</area>
+                    <textarea name="buttontext">
+                        <position>15,0</position>
+                    </textarea>
+                    <textarea name="language" from="nativecountry">
+                        <position>15,45</position>
+                    </textarea>
+                </state>
+                <state name="inactive" from="active" />
+                <state name="selectedactive" from="active">
+                    <shape name="buttonbackground">
+                        <fill style="gradient">
+                            <gradient start="#52CA38" end="#349838" alpha="255" />
+                        </fill>
+                    </shape>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <shape name="buttonbackground">
+                        <fill style="gradient">
+                            <gradient start="#52CA38" end="#349838" alpha="100" />
+                        </fill>
+                    </shape>
+                </state>
+            </statetype>
+            <statetype name="upscrollarrow">
+                <position>15,97%</position>
+                <state type="off">
+                    <imagetype name="upon">
+                        <filename>lb-uparrow-reg.png</filename>
+                    </imagetype>
+                </state>
+                <state type="full">
+                    <imagetype name="upoff">
+                        <filename>lb-uparrow-sel.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+            <statetype name="downscrollarrow">
+                <position>60,97%</position>
+                <state type="off">
+                    <imagetype name="dnon">
+                        <filename>lb-dnarrow-reg.png</filename>
+                    </imagetype>
+                </state>
+                <state type="full">
+                    <imagetype name="dnoff">
+                        <filename>lb-dnarrow-sel.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+            <helptext>Select your preferred language</helptext>
+        </buttonlist>
+
+        <textarea name="helptext" from="basetextarea">
+            <area>300,945,1320,90</area>
+            <align>allcenter</align>
+            <multiline>true</multiline>
+        </textarea>
+
+        <button name="save" from="basebutton">
+            <position>1485,945</position>
+            <value>Save</value>
+        </button>
+
+        <button name="cancel" from="basebutton">
+            <position>60,945</position>
+            <value>Cancel</value>
+        </button>
+
+    </window>
+
+    <window name="grabbersettings">
+
+        <textarea name="title" from="basetextarea">
+            <area>390,60,1140,60</area>
+            <value>Artwork and Metadata Sources</value>
+            <align>hcenter,vcenter</align>
+            <font>baselarge</font>
+        </textarea>
+
+        <textarea name="helptext" from="basetextarea">
+            <area>405,525,1110,420</area>
+            <multiline>yes</multiline>
+            <font>basesmall</font>
+            <align>allcenter</align>
+        </textarea>
+
+        <textarea name="moviegrabber_text" from="basetextarea">
+            <area>112,259,525,45</area>
+            <font>basesmall</font>
+            <value>Movie Metadata Source:</value>
+        </textarea>
+
+        <textarea name="tvgrabber_text" from="basetextarea">
+            <area>112,357,525,45</area>
+            <font>basesmall</font>
+            <value>Television Metadata Source:</value>
+        </textarea>
+
+        <textarea name="gamegrabber_text" from="basetextarea">
+            <area>112,454,525,45</area>
+            <font>basesmall</font>
+            <value>Game Metadata Source:</value>
+        </textarea>
+
+        <textarea name="dailyupdates_text" from="basetextarea">
+            <area>645,547,900,60</area>
+            <value>Perform daily updates of recording artwork</value>
+            <align>left,vcenter</align>
+        </textarea>
+
+    <!--Widgets-->
+
+        <buttonlist name="moviegrabber" from="basewideselector">
+            <position>697,250</position>
+        </buttonlist>
+
+        <buttonlist name="tvgrabber" from="basewideselector">
+            <position>697,348</position>
+        </buttonlist>
+
+        <buttonlist name="gamegrabber" from="basewideselector">
+            <position>697,445</position>
+        </buttonlist>
+
+        <checkbox name="dailyupdates" from="basecheckbox">
+            <position>585,555</position>
+        </checkbox>
+
+        <button name="cancel" from="basebutton">
+            <position>627,945</position>
+            <value>Cancel</value>
+        </button>
+
+        <button name="ok" from="basebutton">
+            <position>997,945</position>
+            <value>OK</value>
+        </button>
+
+    </window>
+
+    <window name="generalwizard">
+
+        <textarea name="title" from="basetextarea">
+            <area>45,15,855,60</area>
+            <font>baselarge</font>
+            <value>MythTV Configuration Wizard</value>
+        </textarea>
+
+        <textarea name="helptext" from="basetextarea">
+            <area>150,750,1620,150</area>
+            <multiline>yes</multiline>
+            <font>basesmall</font>
+            <align>top,hcenter</align>
+        </textarea>
+
+    <!--Widgets-->
+
+        <button name="submit" from="baseverywidebutton">
+            <position>375,250</position>
+            <value>Submit your hardware profile</value>
+        </button>
+
+        <button name="view" from="baseverywidebutton">
+            <position>375,348</position>
+            <value>View your hardware profile</value>
+        </button>
+
+        <button name="delete" from="baseverywidebutton">
+            <position>375,445</position>
+            <value>Delete your hardware profile</value>
+        </button>
+
+        <button name="cancel" from="basebutton">
+            <position>375,966</position>
+            <value>Cancel</value>
+        </button>
+
+        <button name="next" from="basebutton">
+            <position>1320,966</position>
+            <value>Next</value>
+        </button>
+
+    </window>
+
+    <window name="audiowizard">
+
+        <textarea name="title" from="basetextarea">
+            <area>45,15,855,60</area>
+            <font>baselarge</font>
+            <value>Audio Configuration</value>
+        </textarea>
+
+        <textarea name="helptext" from="basetextarea">
+            <area>150,750,1620,150</area>
+            <multiline>yes</multiline>
+            <font>basesmall</font>
+            <align>top,hcenter</align>
+        </textarea>
+
+        <textarea name="auddev_text" from="basetextarea">
+            <area>60,154,450,45</area>
+            <font>basesmall</font>
+            <align>right</align>
+            <value>Audio Device:</value>
+        </textarea>
+
+        <textarea name="ac3_text" from="basetextarea">
+            <area>615,232,-30,45</area>
+            <font>basesmall</font>
+            <value>My audio subsystem supports Dolby Digital</value>
+        </textarea>
+
+        <textarea name="dts_text" from="basetextarea">
+            <area>615,300,-30,45</area>
+            <font>basesmall</font>
+            <value>My audio subsystem supports DTS</value>
+        </textarea>
+
+        <textarea name="eac3_text" from="basetextarea">
+            <area>615,367,-30,45</area>
+            <font>basesmall</font>
+            <value>My audio subsystem supports E-AC-3</value>
+        </textarea>
+
+        <textarea name="truehd_text" from="basetextarea">
+            <area>615,435,-30,45</area>
+            <font>basesmall</font>
+            <value>My audio subsystem supports TrueHD</value>
+        </textarea>
+
+        <textarea name="dtshd_text" from="basetextarea">
+            <area>615,502,-30,45</area>
+            <font>basesmall</font>
+            <value>My audio subsystem supports DTS-HD</value>
+        </textarea>
+
+        <textarea name="speaktext_text" from="auddev_text">
+            <position>60,567</position>
+            <value>Number of Speakers:</value>
+        </textarea>
+
+    <!--Widgets-->
+
+        <buttonlist name="audiodevices" from="basewideselector">
+            <position>540,145</position>
+        </buttonlist>
+
+        <checkbox name="ac3check" from="basecheckbox">
+            <position>540,228</position>
+        </checkbox>
+
+        <checkbox name="dtscheck" from="basecheckbox">
+            <position>540,295</position>
+        </checkbox>
+
+        <checkbox name="eac3check" from="basecheckbox">
+            <position>540,363</position>
+        </checkbox>
+
+        <checkbox name="truehdcheck" from="basecheckbox">
+            <position>540,430</position>
+        </checkbox>
+
+        <checkbox name="dtshdcheck" from="basecheckbox">
+            <position>540,498</position>
+        </checkbox>
+
+        <buttonlist name="speakers" from="basewideselector">
+            <position>540,558</position>
+        </buttonlist>
+
+        <button name="testspeakers" from="basewidebutton">
+            <position>540,633</position>
+        </button>
+
+        <button name="previous" from="basebutton">
+            <position>375,966</position>
+            <value>Previous</value>
+        </button>
+
+        <button name="next" from="basebutton">
+            <position>1320,966</position>
+            <value>Next</value>
+        </button>
+
+    </window>
+
+    <window name="videowizard">
+
+        <textarea name="title" from="basetextarea">
+            <area>45,15,855,60</area>
+            <font>baselarge</font>
+            <value>Video Configuration</value>
+        </textarea>
+
+        <textarea name="helptext" from="basetextarea">
+            <area>150,750,1620,150</area>
+            <multiline>yes</multiline>
+            <font>basesmall</font>
+            <align>top,hcenter</align>
+        </textarea>
+
+        <textarea name="prof_text" from="basetextarea">
+            <area>60,259,450,45</area>
+            <font>basesmall</font>
+            <align>right</align>
+            <value>Video Playback Profile:</value>
+        </textarea>
+
+    <!--Widgets-->
+
+        <buttonlist name="playbackprofiles" from="basewideselector">
+            <position>540,250</position>
+        </buttonlist>
+
+        <button name="testsd" from="baseverywidebutton">
+            <position>540,348</position>
+            <value>Test Standard Definition</value>
+        </button>
+
+        <button name="testhd" from="baseverywidebutton">
+            <position>540,445</position>
+            <value>Test High Definition</value>
+        </button>
+
+        <button name="previous" from="basebutton">
+            <position>375,966</position>
+            <value>Previous</value>
+        </button>
+
+        <button name="next" from="basebutton">
+            <position>1320,966</position>
+            <value>Finish</value>
+        </button>
+
+    </window>
+
+    <window name="backendselection">
+
+        <textarea name="label">
+            <font>baselarge</font>
+            <area>60,30,495,45</area>
+            <value>MythTV Servers</value>
+            <align>left</align>
+        </textarea>
+
+        <shape name="listbackground" from="basebackground">
+            <area>30,82,1140,615</area>
+        </shape>
+
+        <buttonlist name="backends">
+            <area>45,97,1110,585</area>
+            <spacing>4</spacing>
+            <layout>vertical</layout>
+            <wrapstyle>selection</wrapstyle>
+            <buttonarea>0,0,100%,97%</buttonarea>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,100%,82</area>
+                    <shape name="buttonbackground">
+                        <area>0,3,100%,100%</area>
+                        <fill style="gradient">
+                            <gradient start="#505050" end="#000000" alpha="200" direction="vertical"  />
+                        </fill>
+                    </shape>
+                    <textarea name="buttontext">
+                        <area>15,3,675,37</area>
+                        <font>basemedium</font>
+                        <cutdown>yes</cutdown>
+                        <align>left,vcenter</align>
+                    </textarea>
+                    <textarea name="modelname" from="buttontext" /> <!-- Workaround for vanishing buttontext bug -->
+                    <textarea name="protocolversion">
+                        <area>22,45,450,37</area>
+                        <font>basesmallgrey</font>
+                        <cutdown>yes</cutdown>
+                        <align>left,vcenter</align>
+                    </textarea>
+
+                    <textarea name="version">
+                        <area>855,3,150,75</area>
+                        <font>basesmall</font>
+                        <cutdown>yes</cutdown>
+                        <align>right,vcenter</align>
+                    </textarea>
+
+                    <statetype name="connection">
+                        <area>705,3,150,75</area>
+                        <state name="good">
+                            <area>0,0,150,75</area>
+                        </state>
+                        <state name="protocolmismatch" from="good">
+                            <textarea name="description">
+                                <area>0,0,100%,100%</area>
+                                <align>hcenter</align>
+                                <value>Version Mismatch</value>
+                                <font>basesmallred</font>
+                                <multiline>yes</multiline>
+                            </textarea>
+                        </state>
+                        <state name="blocked" from="protocolmismatch">
+                            <textarea name="description">
+                                <value>Firewall</value>
+                            </textarea>
+                        </state>
+                    </statetype>
+
+                    <statetype name="securitypin">
+                        <area>1020,10,60,60</area>
+                        <state name="yes">
+                            <area>0,0,60,60</area>
+                            <shape name="pin">
+                                <area>0,0,60,60</area>
+                                <type>roundbox</type>
+                                <cornerradius>9</cornerradius>
+                                <fill color="#990000" />
+                            </shape>
+                            <imagetype name="locked">
+                                <position>9,7</position>
+                                <filename>shared/secure.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="no">
+                            <area>0,0,60,60</area>
+                            <shape name="nopin">
+                                <area>0,0,60,60</area>
+                                <type>roundbox</type>
+                                <cornerradius>9</cornerradius>
+                                <fill color="#009900" />
+                            </shape>
+                            <imagetype name="unlocked">
+                                <position>3,7</position>
+                                <filename>shared/unsecure.png</filename>
+                            </imagetype>
+                        </state>
+                    </statetype>
+                </state>
+                <state name="inactive" from="active" />
+                <state name="selectedactive" from="active">
+                    <shape name="buttonbackground">
+                        <fill style="gradient">
+                            <gradient start="#52CA38" end="#349838" alpha="255" />
+                        </fill>
+                    </shape>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <shape name="buttonbackground">
+                        <fill style="gradient">
+                            <gradient start="#52CA38" end="#349838" alpha="100" />
+                        </fill>
+                    </shape>
+                </state>
+            </statetype>
+            <statetype name="upscrollarrow">
+                <position>15,96%</position>
+                <state type="full">
+                    <imagetype name="upoff">
+                        <filename>lb-uparrow-sel.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+            <statetype name="downscrollarrow">
+                <position>60,96%</position>
+                <state type="full">
+                    <imagetype name="dnoff">
+                        <filename>lb-dnarrow-sel.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+            <helptext>Select the server you wish to connect to</helptext>
+        </buttonlist>
+
+        <textarea name="helptext" from="basetextarea">
+            <area>300,795,600,90</area>
+            <align>allcenter</align>
+            <multiline>true</multiline>
+        </textarea>
+
+        <button name="save" from="basebutton">
+            <position>915,795</position>
+            <value>Save</value>
+        </button>
+
+        <button name="manual" from="basebutton">
+            <position>465,795</position>
+            <value>Manual</value>
+        </button>
+
+        <button name="cancel" from="basebutton">
+            <position>60,795</position>
+            <value>Cancel</value>
+        </button>
+
+    </window>
+
+</mythuitheme>

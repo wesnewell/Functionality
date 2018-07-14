@@ -1,0 +1,208 @@
+<mythuitheme>
+
+    <window name="status">
+
+       <shape name="titlebox">
+           <area>15,15,1170,90</area>
+           <type>roundbox</type>
+           <fill color="#000000" alpha="150" />
+           <cornerradius>45</cornerradius>
+       </shape>
+
+        <shape name="infobox">
+            <area>-15,892,1950,555</area>
+            <type>box</type>
+            <fill color="#000000" alpha="150" />
+        </shape>
+
+        <textarea name="heading">
+            <area>75,15,885,90</area>
+            <cutdown>yes</cutdown>
+            <font>baselarge</font>
+            <align>vcenter,left</align>
+            <value>System Status</value>
+        </textarea>
+
+        <shape name="list_background">
+            <area>30,202,1860,675</area>
+            <type>roundbox</type>
+            <fill color="#000000" alpha="150" />
+            <cornerradius>18</cornerradius>
+        </shape>
+
+        <buttonlist name="category">
+            <area>22,124,1875,45</area>
+            <layout>horizontal</layout>
+            <spacing>10</spacing>
+            <buttonarea>49,0,1785,60</buttonarea>
+            <triggerevent context="Global" action="ESCAPE">UP</triggerevent>
+            <statetype name="buttonitem">
+                <area>0,0,270,60</area>
+                <state name="active">
+                    <shape name="list_background">
+                        <area>0,0,285,60</area>
+                        <type>roundbox</type>
+                        <fill color="#999999" alpha="50" />
+                        <line color="#FFFFFF" alpha="0" width="0" />
+                        <cornerradius>30</cornerradius>
+                    </shape>
+                    <textarea name="buttontext" from="basetextarea">
+                        <area>7,0,270,60</area>
+                        <font>basesmall</font>
+                        <font state="error">basesmallred</font>
+                        <font state="warning">basesmallyellow</font>
+                        <align>allcenter</align>
+                    </textarea>
+                </state>
+                <state name="selectedactive" from="active">
+                    <shape name="list_background">
+                        <area>0,0,285,60</area>
+                        <type>roundbox</type>
+                        <fill color="#ffffff" alpha="50" />
+                        <line color="#FFFFFF" alpha="0" width="0" />
+                        <cornerradius>30</cornerradius>
+                    </shape>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <shape name="list_background">
+                        <area>0,0,285,60</area>
+                        <type>roundbox</type>
+                        <fill color="#ffffff" alpha="25" />
+                        <line color="#FFFFFF" alpha="0" width="0" />
+                        <cornerradius>30</cornerradius>
+                    </shape>
+                </state>
+            </statetype>
+            <statetype name="downscrollarrow">
+                <position>1845,7</position>
+                <state type="off">
+                    <imagetype name="dnon">
+                    </imagetype>
+                </state>
+                <state type="full">
+                    <imagetype name="dnoff">
+                        <filename>shared/rightarrow.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+            <statetype name="upscrollarrow">
+                <position>-7,7</position>
+                <state type="off">
+                    <imagetype name="upon">
+                    </imagetype>
+                </state>
+                <state type="full">
+                    <imagetype name="upoff">
+                        <filename>shared/leftarrow.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+        </buttonlist>
+
+        <buttonlist name="log" from="basebuttonlist">
+            <area>45,217,1800,675</area>
+            <buttonarea>0,0,1755,660</buttonarea>
+            <spacing>10</spacing>
+
+            <statetype name="upscrollarrow">
+                <position>1785,-12</position>
+            </statetype>
+            <statetype name="downscrollarrow">
+                <position>1785,601</position>
+            </statetype>
+        </buttonlist>
+
+        <!-- <textarea name="helplabel"> -->
+        <!--     <area>45,907,1830,45</area> -->
+        <!--     <value>Details</value> -->
+        <!--     <font>basemedium</font> -->
+        <!-- </textarea> -->
+
+        <textarea name="helptext" from="basetextarea">
+            <area>97,900,1777,150</area>
+            <value>This screen displays the status of various system components</value>
+            <multiline>yes</multiline>
+            <font>basesmallgrey</font>
+            <align>top</align>
+        </textarea>
+        
+        <clock name="clock">
+            <area>1250,1016,650,50</area>
+            <font>clock</font>
+            <align>right</align>
+            <template>%DATE%, %TIME%</template>
+        </clock>
+
+    </window>
+
+    <window name="standbymode">
+        <area>1,1,100%,100%</area>
+        <shape name="background">
+            <area>0,0,100%,100%</area>
+            <fill color="#000000" alpha="200" />
+        </shape>
+
+        <group name="popup">
+            <area>300,300,600,300</area>
+            <shape name="background" from="basebackground">
+                <area>0,0,100%,100%</area>
+                <fill color="#000000" alpha="255" />
+            </shape>
+
+            <textarea name="heading">
+                <area>30,30,540,60</area>
+                <font>baselarge</font>
+                <align>allcenter</align>
+                <value>MythTV is in standby</value>
+            </textarea>
+
+            <statetype name="backendstatus">
+                <area>30,112,540,150</area>
+                <state name="idle">
+                    <area>0,0,540,150</area>
+                    <!--<imagetype name="icon">-->
+                    <shape name="iconplaceholder">
+                        <area>45,15,120,120</area>
+                        <fill color="#666666" />
+                    </shape>
+                    <!-- </imagetype>-->
+                    <textarea name="status">
+                        <area>195,15,330,120</area>
+                        <font>basemedium</font>
+                        <value>Backend is idle</value>
+                        <align>allcenter</align>
+                        <multiline>true</multiline>
+                    </textarea>
+                </state>
+                <state name="recording" from="idle">
+                    <shape name="iconplaceholder">
+                        <fill color="#80DF00" />
+                        <alphapulse min="128" max="255"  change="1" />
+                    </shape>
+                    <textarea name="status">
+                        <value>Backend is recording</value>
+                    </textarea>
+                </state>
+                <state name="shuttingdown" from="idle">
+                    <shape name="iconplaceholder">
+                        <fill color="#FFFF33" />
+                        <alphapulse min="128" max="255"  change="1" />
+                    </shape>
+                    <textarea name="status">
+                        <value>Backend is shutting down</value>
+                    </textarea>
+                </state>
+                <state name="offline" from="idle">
+                    <shape name="iconplaceholder">
+                        <fill color="#800900" />
+                    </shape>
+                    <textarea name="status">
+                        <value>Backend is offline</value>
+                    </textarea>
+                </state>
+            </statetype>
+        </group>
+    </window>
+
+</mythuitheme>
+

@@ -1,0 +1,363 @@
+<mythuitheme>
+
+  <window name="gameui">
+
+    <imagetype name="fanart">
+        <area>0,0,1920,1080</area>
+    </imagetype>
+
+    <fontdef name="largetitle" face="DejaVu Sans">
+        <color>#ffffff</color>
+        <pixelsize>66</pixelsize>
+        <shadowcolor>#000000</shadowcolor>
+        <shadowoffset>3,3</shadowoffset>
+        <shadowalpha>64</shadowalpha>
+    </fontdef>
+
+    <fontdef name="infofont" face="DejaVu Sans">
+        <color>#ffffff</color>
+        <pixelsize>37</pixelsize>
+    </fontdef>
+
+    <buttontree name="gametreelist">
+        <area>12,78,1896,465</area>
+        <numlists>3</numlists>
+        <spacing>10</spacing>
+        <buttonlist name="listtemplate" from="basebuttonlist" />
+    </buttontree>
+
+    <textarea name="title">
+        <area>144,660,1128,90</area>
+        <font>largetitle</font>
+    </textarea>
+
+    <textarea name="system_label">
+        <area>144,765,210,52</area>
+        <font>infofont</font>
+        <value>System:</value>
+    </textarea>
+
+    <textarea name="system">
+        <area>354,765,870,52</area>
+        <font>infofont</font>
+    </textarea>
+
+    <textarea name="year_label">
+        <area>144,817,210,52</area>
+        <font>infofont</font>
+        <value>Year:</value>
+    </textarea>
+
+    <textarea name="year">
+        <area>354,817,870,52</area>
+        <font>infofont</font>
+    </textarea>
+
+    <textarea name="genre_label">
+        <area>144,870,210,52</area>
+        <font>infofont</font>
+        <value>Genre:</value>
+    </textarea>
+
+    <textarea name="genre">
+        <area>354,870,870,52</area>
+        <font>infofont</font>
+    </textarea>
+
+    <textarea name="favorite">
+        <area>144,922,210,52</area>
+        <font>infofont</font>
+        <value>Favorite:</value>
+    </textarea>
+
+    <textarea name="showfavorite">
+        <area>354,922,870,52</area>
+        <font>infofont</font>
+    </textarea>
+
+    <textarea name="description">
+        <area>354,997,870,52</area>
+        <font>infofont</font>
+    </textarea>
+
+    <imagetype name="coverart">
+        <area>915,750,270,225</area>
+        <preserveaspect>true</preserveaspect>
+    </imagetype>
+
+    <imagetype name="screenshot">
+        <area>1320,750,450,294</area>
+    </imagetype>
+
+  </window>
+
+  <window name="gamedetailspopup">
+
+    <imagetype name="fanart">
+        <area>0,0,1920,1080</area>
+    </imagetype>
+
+    <textarea name="title" from="basetextarea">
+        <area>15,75,1890,75</area>
+        <value>Game Information</value>
+        <align>hcenter,vcenter</align>
+        <font>baselarge</font>
+    </textarea>
+
+    <textarea name="gamename_lab" from="basetextarea">
+        <area>60,240,210,60</area>
+        <value>Game:</value>
+        <align>right</align>
+    </textarea>
+
+    <textarea name="title" from="basetextarea">
+        <area>285,240,855,60</area>
+    </textarea>
+
+    <textarea name="gametype_lab" from="basetextarea">
+        <area>60,300,210,60</area>
+        <value>Type:</value>
+        <align>right</align>
+    </textarea>
+
+    <textarea name="gametype" from="basetextarea">
+        <area>285,300,855,60</area>
+    </textarea>
+
+    <textarea name="romname_lab" from="basetextarea">
+        <area>60,360,210,60</area>
+        <value>Filename:</value>
+        <align>right</align>
+    </textarea>
+
+    <textarea name="romname" from="basetextarea">
+        <area>285,360,855,60</area>
+    </textarea>
+
+    <textarea name="rompath_lab" from="basetextarea">
+        <area>60,420,210,60</area>
+        <value>ROM path:</value>
+        <align>right</align>
+    </textarea>
+
+    <textarea name="rompath" from="basetextarea">
+        <area>285,420,855,60</area>
+    </textarea>
+
+    <textarea name="allsystems_label" from="basetextarea">
+        <area>60,480,210,60</area>
+        <value>System(s):</value>
+        <align>right</align>
+    </textarea>
+
+    <textarea name="allsystems" from="basetextarea">
+        <area>285,480,855,60</area>
+    </textarea>
+
+    <textarea name="genre_label" from="basetextarea">
+        <area>60,540,210,60</area>
+        <value>Genre:</value>
+        <align>right</align>
+    </textarea>
+
+    <textarea name="genre" from="basetextarea">
+        <area>285,540,855,60</area>
+    </textarea>
+
+    <textarea name="year_lab" from="basetextarea">
+        <area>60,600,210,60</area>
+        <value>Year:</value>
+        <align>right</align>
+    </textarea>
+
+    <textarea name="year" from="basetextarea">
+        <area>285,600,600,60</area>
+    </textarea>
+
+    <textarea name="country_lab" from="basetextarea">
+        <area>60,660,210,60</area>
+        <value>Country:</value>
+        <align>right</align>
+    </textarea>
+
+    <textarea name="country" from="basetextarea">
+        <area>285,660,600,60</area>
+    </textarea>
+
+    <textarea name="publisher_lab" from="basetextarea">
+        <area>60,720,210,60</area>
+        <value>Publisher:</value>
+        <align>right</align>
+    </textarea>
+
+    <textarea name="publisher" from="basetextarea">
+        <area>285,720,600,60</area>
+    </textarea>
+
+    <textarea name="crc_lab" from="basetextarea">
+        <area>60,780,210,60</area>
+        <value>CRC:</value>
+        <align>right</align>
+    </textarea>
+
+    <textarea name="crc" from="basetextarea">
+        <area>285,780,600,60</area>
+    </textarea>
+
+    <textarea name="description" from="basetextarea">
+        <area>285,840,600,60</area>
+    </textarea>
+
+    <imagetype name="coverart">
+        <area>1200,300,622,480</area>
+        <preserveaspect>true</preserveaspect>
+    </imagetype>
+
+    <button name="play_button" from="basebutton">
+        <position>520,900</position>
+        <value>Play</value>
+    </button>
+
+    <button name="done_button" from="basebutton">
+        <position>943,900</position>
+        <value>Done</value>
+    </button>
+
+  </window>
+
+  <window name="edit_metadata">
+
+    <textarea name="title" from="basetextarea">
+        <area>15,75,1890,75</area>
+        <value>Edit Game Information</value>
+        <align>hcenter,vcenter</align>
+        <font>baselarge</font>
+    </textarea>
+
+    <!-- Labels -->
+
+    <textarea name="gamename_label" from="basetextarea">
+        <area>375,165,375,60</area>
+        <value>Game Name:</value>
+        <align>right,top</align>
+    </textarea>
+
+    <textarea name="genre_label" from="basetextarea">
+        <area>375,232,375,60</area>
+        <value>Genre:</value>
+        <align>right,top</align>
+    </textarea>
+
+    <textarea name="year_label" from="basetextarea">
+        <area>375,300,375,60</area>
+        <value>Year:</value>
+        <align>right,top</align>
+    </textarea>
+
+    <textarea name="country_label" from="basetextarea">
+        <area>375,367,375,60</area>
+        <value>Country:</value>
+        <align>right,top</align>
+    </textarea>
+
+    <textarea name="publisher_label" from="basetextarea">
+        <area>375,435,375,60</area>
+        <value>Publisher:</value>
+        <align>right,top</align>
+    </textarea>
+
+    <textarea name="description_label" from="basetextarea">
+        <area>375,502,375,60</area>
+        <value>Description:</value>
+        <align>right,top</align>
+    </textarea>
+
+    <textarea name="fav_label" from="basetextarea">
+        <area>375,600,375,60</area>
+        <value>Favorite:</value>
+        <align>right,top</align>
+    </textarea>
+
+    <textarea name="screenshot_label" from="basetextarea">
+        <area>375,667,375,60</area>
+        <value>Screenshot:</value>
+        <align>right,top</align>
+    </textarea>
+
+    <textarea name="fanart_label" from="basetextarea">
+        <area>375,735,375,60</area>
+        <value>Fanart:</value>
+        <align>right,top</align>
+    </textarea>
+
+    <textarea name="coverart_label" from="basetextarea">
+        <area>375,802,375,60</area>
+        <value>Boxart:</value>
+        <align>right,top</align>
+    </textarea>
+
+    <!-- Widgets -->
+
+    <textedit name="title_edit" from="basetextedit">
+        <position>765,150</position>
+    </textedit>
+
+    <textedit name="genre_edit" from="basetextedit">
+        <position>765,217</position>
+    </textedit>
+
+    <textedit name="year_edit" from="basetextedit">
+        <position>765,285</position>
+    </textedit>
+
+    <textedit name="country_edit" from="basetextedit">
+        <position>765,352</position>
+    </textedit>
+
+    <textedit name="publisher_edit" from="basetextedit">
+        <position>765,420</position>
+    </textedit>
+
+    <textedit name="description_edit" from="basetextedit">
+        <position>765,487</position>
+    </textedit>
+
+    <checkbox name="favorite_check" from="basecheckbox">
+        <position>765,600</position>
+    </checkbox>
+
+    <button name="screenshot_button" from="basesearchbutton">
+        <position>765,667</position>
+    </button>
+
+    <textarea name="screenshot_text" from="basetextarea">
+        <area>825,660,1125,60</area>
+        <value>/path/to/the/thing.jpg</value>
+    </textarea>
+
+    <button name="fanart_button" from="basesearchbutton">
+        <position>765,720</position>
+    </button>
+
+    <textarea name="fanart_text" from="basetextarea">
+        <area>825,727,1125,60</area>
+        <value>/path/to/the/thing.jpg</value>
+    </textarea>
+
+    <button name="coverart_button" from="basesearchbutton">
+        <position>765,787</position>
+    </button>
+
+    <textarea name="coverart_text" from="basetextarea">
+        <area>825,795,1125,60</area>
+        <value>/path/to/the/thing.jpg</value>
+    </textarea>
+
+    <button name="done_button" from="basebutton">
+        <position>765,922</position>
+        <value>Done</value>
+    </button>
+
+  </window>
+
+</mythuitheme>

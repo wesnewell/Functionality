@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mythuitheme>
+
+    <window name="keygrabpopup">
+        <area>585,225,750,750</area>
+        <shape name="backimg" from="basebackground">
+            <area>0,0,750,750</area>
+        </shape>
+
+        <textarea name="message" from="basetextarea">
+            <area>27,27,690,600</area>
+            <multiline>yes</multiline>
+        </textarea>
+
+        <button name="cancel" from="basebutton">
+            <position>127,630</position>
+            <value>Cancel</value>
+        </button>
+
+        <button name="ok" from="basebutton">
+            <position>397,630</position>
+            <value>OK</value>
+        </button>
+    </window>
+
+    <window name="controls">
+
+        <textarea name="leftdesc" from="basetextarea">
+            <area>96,69,840,45</area>
+            <value>Contexts</value>
+            <align>center</align>
+        </textarea>
+
+        <buttonlist name="leftlist" from="basebuttonlist">
+            <area>96,129,840,660</area>
+            <showarrow>no</showarrow>
+        </buttonlist>
+
+        <textarea name="rightdesc" from="leftdesc">
+            <area>984,69,840,45</area>
+            <value>Actions</value>
+        </textarea>
+
+        <buttonlist name="rightlist" from="leftlist">
+            <area>984,129,840,660</area>
+        </buttonlist>
+
+        <button name="action_0" from="basebutton">
+            <position>412,840</position>
+        </button>
+
+        <button name="action_1" from="action_0">
+            <position>697,840</position>
+        </button>
+
+        <button name="action_2" from="action_0">
+            <position>982,840</position>
+        </button>
+
+        <button name="action_3" from="action_0">
+            <position>1267,840</position>
+        </button>
+
+        <textarea name="description" from="basetextarea">
+            <area>96,900,1728,135</area>
+            <multiline>yes</multiline>
+            <align>center</align>
+        </textarea>
+
+    </window>
+</mythuitheme>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mythuitheme>
+
+    <window name="gallery">
+
+        <fontdef name="menu" from="basesmall">
+            <color>#ffffff</color>
+            <pixelsize>33</pixelsize>
+        </fontdef>
+
+        <fontdef name="title" face="baselarge">
+            <color>#ffffff</color>
+            <shadowcolor>#666666</shadowcolor>
+            <shadowoffset>2,2</shadowoffset>
+            <shadowalpha>64</shadowalpha>
+            <pixelsize>50</pixelsize>
+        </fontdef>
+
+        <buttonlist name="images">
+            <area>0,105,1920,780</area>
+            <layout>grid</layout>
+            <wrapstyle>flowing</wrapstyle>
+            <spacing>19</spacing>
+            <buttonarea>90,0,1755,780</buttonarea>
+            <statetype name="buttonitem">
+                <area>0,0,225,172</area>
+                <state name="active">
+                        <shape name="btnbckgrnd">
+                        <area>0,0,225,172</area>
+                        <type>roundbox</type> 
+                        <fill color="#666666" alpha="50" />
+                        <line color="#FFFFFF" alpha="0" width="0" /> 
+                        <cornerradius>15</cornerradius> 
+                    </shape>
+                    <imagetype name="buttonimage">
+                        <area>7,7,210,157</area>
+                        <preserveaspect>yes</preserveaspect>
+                    </imagetype>
+                    <statetype name="buttoncheck">
+                        <position>195,150</position>
+                        <showempty>yes</showempty>
+                        <state type="full">
+                            <imagetype name="marked">
+                                <filename>shared/mv_checked_high.png</filename>
+                            </imagetype>
+                        </state>
+                    </statetype>
+                </state>
+                <state name="selectedactive" from="active">
+                        <shape name="btnbckgrnd">
+                            <fill color="#FFFFFF" alpha="50" />
+                        </shape>
+                </state>
+            </statetype>
+            <statetype name="upscrollarrow">
+                <position>7,0</position>
+                <state type="full">
+                    <imagetype name="upoff">
+                        <filename>uparrow.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+            <statetype name="downscrollarrow">
+                <position>7,727</position>
+                <state type="full">
+                    <imagetype name="dnoff">
+                        <filename>downarrow.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+        </buttonlist>
+
+        <shape name="infobox">
+            <area>-15,900,1950,225</area>
+            <type>box</type>
+            <fill color="#000000" alpha="100" />
+            <line color="#FFFFFF" alpha="200" width="3" />
+        </shape>
+
+        <textarea name="help1">
+            <area>0,930,1920,52</area>
+            <font>menu</font>
+            <align>allcenter</align>
+            <value>SELECT: View</value>
+        </textarea>
+
+        <textarea name="help2">
+            <area>0,990,1920,52</area>
+            <font>menu</font>
+            <align>allcenter</align>
+            <value>MENU: Activate Menu</value>
+        </textarea>
+
+        <shape name="titlebox">
+            <area>-15,-15,1950,97</area>
+            <type>box</type>
+            <fill color="#000000" alpha="100" />
+            <line color="#FFFFFF" alpha="200" width="3" />
+        </shape>
+
+        <textarea name="title" from="basetextarea">
+            <area>0,0,1920,75</area>
+            <font>title</font>
+            <align>allcenter</align>
+        </textarea>
+
+        <!-- optional - shows a message when no images are available
+             in the current directory -->
+        <textarea name="noimages" from="basetextarea">
+            <area>22,30,1155,840</area>
+            <font>basemedium</font>
+            <align>allcenter</align>
+        </textarea>
+    </window>
+
+</mythuitheme>

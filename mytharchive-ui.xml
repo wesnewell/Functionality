@@ -1,0 +1,566 @@
+<!--
+
+Common MythArchive window definitions
+
+-->
+<mythuitheme>
+
+    <window name="selectdestination">
+
+        <fontdef name="title" from="basesmall">
+            <color>#ffff00</color>
+            <shadowcolor>#000000</shadowcolor>
+            <shadowoffset>3,3</shadowoffset>
+            <shadowalpha>64</shadowalpha>
+            <pixelsize>50</pixelsize>
+        </fontdef>
+
+        <fontdef name="description" from="basesmall">
+            <color>#ffffff</color>
+            <pixelsize>37</pixelsize>
+        </fontdef>
+
+        <fontdef name="detail" from="basesmall">
+            <color>#ffffff</color>
+            <pixelsize>29</pixelsize>
+        </fontdef>
+
+        <fontdef name="detailtitle" from="basesmall">
+            <color>#ffff00</color>
+            <pixelsize>29</pixelsize>
+        </fontdef>
+
+        <fontdef name="label" from="basesmall">
+            <color>#ffff00</color>
+            <pixelsize>33</pixelsize>
+        </fontdef>
+
+        <!--
+            destination selector
+        -->
+        <shape name="topbackground" from="basebackground">
+            <area>45,82,1830,450</area>
+        </shape>
+
+        <textarea name="title1" from="basetextarea">
+            <area>0,15,1920,75</area>
+            <font>title</font>
+            <align>center</align>
+            <value>Select Destination</value>
+        </textarea>
+
+        <textarea name="title2" from="basetextarea">
+            <area>90,105,750,75</area>
+            <font>label</font>
+            <value>Select Destination</value>
+        </textarea>
+
+        <buttonlist name="destination_selector" from="basewideselector">
+            <position>90,165</position>
+        </buttonlist>
+
+        <textarea name="destination_text" from="basetextarea">
+            <area>90,240,1785,135</area>
+            <font>detail</font>
+            <value>description goes here.</value>
+            <multiline>yes</multiline>
+        </textarea>
+
+        <textedit name="filename_edit" from="basetextedit">
+            <position>90,330</position>
+        </textedit>
+
+        <button name="find_button" from="basebutton">
+            <position>1125,337</position>
+            <value>Find</value>
+        </button>
+
+        <textarea name="freespace_label" from="basetextarea">
+            <area>90,420,225,75</area>
+            <font>label</font>
+            <value>Free Space:</value>
+        </textarea>
+        <textarea name="freespace_text" from="basetextarea">
+            <area>352,420,300,75</area>
+            <font>description</font>
+            <value>0.00 GB</value>
+        </textarea>
+
+        <shape name="bottombackground" from="basebackground">
+            <area>45,555,1830,300</area>
+        </shape>
+
+        <textarea name="title" from="basetextarea">
+            <area>142,585,750,75</area>
+            <font>description</font>
+            <value>Make ISO Image</value>
+        </textarea>
+
+        <checkbox name="makeisoimage_check" from="basecheckbox">
+            <position>90,585</position>
+        </checkbox>
+
+        <textarea name="burntodvdr_text" from="basetextarea">
+            <area>142,652,750,75</area>
+            <font>description</font>
+            <value>Burn to DVD</value>
+        </textarea>
+
+        <checkbox name="burntodvdr_check" from="basecheckbox">
+            <position>90,652</position>
+        </checkbox>
+
+        <textarea name="erasedvdrw_text" from="basetextarea">
+            <area>142,720,750,75</area>
+            <font>description</font>
+            <value>Force Overwrite of DVD-RW Media</value>
+        </textarea>
+
+        <checkbox name="erasedvdrw_check" from="basecheckbox">
+            <position>90,727</position>
+        </checkbox>
+
+        <button name="cancel_button" from="basebutton">
+            <position>82,975</position>
+            <value>Cancel</value>
+        </button>
+
+        <button name="prev_button" from="basebutton">
+            <position>1350,975</position>
+            <value>Previous</value>
+        </button>
+
+        <button name="next_button" from="basebutton">
+            <position>1590,975</position>
+            <value>Next</value>
+        </button>
+
+    </window>
+
+  <!-- 
+      Recording Selector
+  -->
+  <window name="recording_selector">
+
+        <fontdef name="title" from="baselarge">
+            <color>#ffff00</color>
+            <shadowcolor>#000000</shadowcolor>
+            <shadowoffset>3,3</shadowoffset>
+            <shadowalpha>64</shadowalpha>
+            <pixelsize>50</pixelsize>
+        </fontdef>
+
+        <shape name="topbackground" from="basebackground">
+            <area>45,90,1830,450</area>
+        </shape>
+
+        <textarea name="title" from="basetextarea">
+            <area>0,15,1920,75</area>
+            <font>title</font>
+            <align>allcenter</align>
+            <value>Select Recordings</value>
+        </textarea>
+
+        <textarea name="title2" from="basetextarea">
+            <area>75,127,300,75</area>
+            <font>basesmallyellow</font>
+            <align>right</align>
+            <value>Show Recordings</value>
+        </textarea>
+
+        <buttonlist name="category_selector" from="basewideselector">
+            <area>412,120,1455,60</area>
+        </buttonlist>
+
+        <buttonlist name="recordinglist" from="basebuttonlist">
+            <area>90,195,1717,307</area>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <textarea name="buttontext">
+                        <area>7,0,1650,45</area>
+                    </textarea>
+                    <statetype name="buttoncheck">
+                        <position>1672,7</position>
+                    </statetype>
+                </state>
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonbackground">
+                        <shape name="archivegradient1">
+                            <fill style="gradient">
+                                <gradient start="#52CA38" end="#349838" alpha="255" />
+                            </fill>
+                        </shape>
+                    </imagetype>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <imagetype name="buttonbackground">
+                        <shape name="archivegradient2">
+                            <fill style="gradient">
+                                <gradient start="#52CA38" end="#349838" alpha="100" />
+                            </fill>
+                        </shape>
+                    </imagetype>
+                    <textarea name="buttontext">
+                        <font>basesmallpurple</font>
+                    </textarea>
+                </state>
+            </statetype>
+        </buttonlist>
+
+        <shape name="bottombackground" from="basebackground">
+            <area>45,570,1830,375</area>
+        </shape>
+
+        <textarea name="progtitle" from="basetextarea">
+            <area>90,592,960,45</area>
+            <font>basesmallyellow</font>
+            <value></value>
+            <multiline>no</multiline>
+        </textarea>
+
+        <textarea name="progdatetime" from="basetextarea">
+            <area>1020,592,795,45</area>
+            <font>basesmallyellow</font>
+            <align>right</align>
+            <value></value>
+            <multiline>no</multiline>
+        </textarea>
+
+        <textarea name="progdescription" from="basetextarea">
+            <area>90,630,1350,225</area>
+            <value></value>
+            <multiline>yes</multiline>
+        </textarea>
+
+        <imagetype name="cutlist_image">
+            <area>97,892,37,37</area>
+            <filename>ma_cutlist.png</filename>
+        </imagetype>
+
+        <textarea name="filesize" from="basetextarea">
+            <area>1665,900,150,60</area>
+            <align>right</align>
+            <value></value>
+        </textarea>
+
+        <imagetype name="preview_image">
+            <area>1500,637,300,255</area>
+            <filename>blank.png</filename>
+        </imagetype>
+
+        <button name="cancel_button" from="basebutton">
+            <position>82,975</position>
+            <value>Cancel</value>
+        </button>
+
+        <button name="ok_button" from="basebutton">
+            <position>1590,975</position>
+            <value>OK</value>
+        </button>
+
+    </window>
+
+  <!--
+      File Selector
+  -->
+
+    <window name="file_selector">
+        <fontdef name="title" from="baselarge">
+            <color>#ffff00</color>
+            <shadowcolor>#000000</shadowcolor>
+            <shadowoffset>3,3</shadowoffset>
+            <shadowalpha>64</shadowalpha>
+            <pixelsize>50</pixelsize>
+        </fontdef>
+
+        <textarea name="title_text" from="basetextarea">
+            <area>0,7,1920,67</area>
+            <font>title</font>
+            <align>allcenter</align>
+            <value>File Finder</value>
+        </textarea>
+
+        <textedit name="location_edit" from="basetextedit">
+            <position>300,97</position>
+        </textedit>
+
+        <button name="back_button" from="basebutton">
+            <position>937,105</position>
+            <value>Back</value>
+        </button>
+
+        <button name="home_button" from="basebutton">
+            <position>1177,105</position>
+            <value>Home</value>
+        </button>
+
+        <buttonlist name="filelist" from="basebuttonlist">
+            <area>60,195,1800,757</area>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <imagetype name="buttonimage">
+                        <area>3,3,42,42</area>
+                    </imagetype>
+                    <textarea name="buttontext">
+                        <area>52,0,1530,52</area>
+                    </textarea>
+                    <textarea name="size" from="buttontext">
+                        <area>1537,0,187,52</area>
+                        <align>right,vcenter</align>
+                    </textarea>
+                    <statetype name="buttoncheck">
+                        <position>1755,7</position>
+                    </statetype>
+                </state>
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonbackground">
+                        <shape name="archivegradient3">
+                            <fill style="gradient">
+                                <gradient start="#52CA38" end="#349838" alpha="255" />
+                            </fill>
+                        </shape>
+                    </imagetype>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <imagetype name="buttonbackground">
+                        <shape name="archivegradient4">
+                            <fill style="gradient">
+                                <gradient start="#52CA38" end="#349838" alpha="100" />
+                            </fill>
+                        </shape>
+                    </imagetype>
+                    <textarea name="buttontext">
+                        <font>basesmallpurple</font>
+                    </textarea>
+                </state>
+            </statetype>
+        </buttonlist>
+
+        <button name="cancel_button" from="basebutton">
+            <position>82,975</position>
+            <value>Cancel</value>
+        </button>
+
+        <button name="ok_button" from="basebutton">
+            <position>1590,975</position>
+            <value>OK</value>
+        </button>
+
+    </window>
+
+  <!--
+      Video Selector
+  -->
+  <window name="video_selector">
+
+        <fontdef name="title" from="baselarge">
+            <color>#ffff00</color>
+            <shadowcolor>#000000</shadowcolor>
+            <shadowoffset>3,3</shadowoffset>
+            <shadowalpha>64</shadowalpha>
+            <pixelsize>50</pixelsize>
+        </fontdef>
+
+        <shape name="topbackground" from="basebackground">
+            <area>45,90,1830,510</area>
+        </shape>
+
+        <textarea name="title1" from="basetextarea">
+            <area>0,15,1920,75</area>
+            <font>title</font>
+            <align>allcenter</align>
+            <value>Select Videos</value>
+        </textarea>
+
+        <textarea name="title2" from="basetextarea">
+            <area>67,127,300,75</area>
+            <font>basesmallyellow</font>
+            <align>right</align>
+            <value>Video Category</value>
+        </textarea>
+
+        <buttonlist name="category_selector" from="basewideselector">
+            <area>397,120,720,60</area>
+        </buttonlist>
+
+        <buttonlist name="videolist" from="basebuttonlist">
+            <area>105,195,1695,352</area>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <textarea name="buttontext">
+                        <area>7,0,1575,45</area>
+                    </textarea>
+                    <statetype name="buttoncheck">
+                        <position>1650,7</position>
+                    </statetype>
+                </state>
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonbackground">
+                        <shape name="archivegradient5">
+                            <fill style="gradient">
+                                <gradient start="#52CA38" end="#349838" alpha="255" />
+                            </fill>
+                        </shape>
+                    </imagetype>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <imagetype name="buttonbackground">
+                        <shape name="archivegradient6">
+                            <fill style="gradient">
+                                <gradient start="#52CA38" end="#349838" alpha="100" />
+                            </fill>
+                        </shape>
+                    </imagetype>
+                    <textarea name="buttontext">
+                        <font>basesmallpurple</font>
+                    </textarea>
+                </state>
+            </statetype>
+        </buttonlist>
+
+        <shape name="bottombackground" from="basebackground">
+            <area>45,630,1545,315</area>
+        </shape>
+
+        <textarea name="videotitle">
+            <area>90,645,960,45</area>
+            <font>basesmallyellow</font>
+            <value>title goes here</value>
+            <multiline>no</multiline>
+        </textarea>
+
+        <textarea name="videoplot" from="basetextarea">
+            <area>90,720,1200,195</area>
+            <value>description goes here.</value>
+            <multiline>yes</multiline>
+        </textarea>
+
+        <textarea name="filesize" from="basetextarea">
+            <area>1410,900,150,60</area>
+            <align>right</align>
+            <value>x.xx Gb</value>
+        </textarea>
+
+        <imagetype name="cover_background">
+            <area>1612,627,225,315</area>
+            <filename>ma_coverback.png</filename>
+        </imagetype>
+
+        <imagetype name="cover_image">
+            <area>1620,634,210,300</area>
+        </imagetype>
+
+        <textarea name="label" from="basetextarea">
+            <area>1650,525,90,60</area>
+            <font>basesmallyellow</font>
+            <align>right</align>
+            <value>PL:</value>
+        </textarea>
+
+        <textarea name="parentallevel_text" from="basetextarea">
+            <area>1785,525,30,60</area>
+            <value>1</value>
+        </textarea>
+
+        <textarea name="warning_text" from="basetextarea">
+            <area>75,300,1770,60</area>
+            <align>allcenter</align>
+            <value>No videos available</value>
+        </textarea>
+
+        <button name="cancel_button" from="basebutton">
+            <position>82,975</position>
+            <value>Cancel</value>
+        </button>
+
+        <button name="ok_button" from="basebutton">
+            <position>1590,975</position>
+            <value>OK</value>
+        </button>
+
+    </window>
+
+    <window name="logviewer">
+
+        <fontdef name="title" from="basesmall">
+            <color>#ffff00</color>
+            <shadowcolor>#000000</shadowcolor>
+            <shadowoffset>3,3</shadowoffset>
+            <shadowalpha>64</shadowalpha>
+            <pixelsize>50</pixelsize>
+        </fontdef>
+
+        <textarea name="title1" from="basetextarea">
+            <area>0,15,1920,75</area>
+            <font>title</font>
+            <align>center</align>
+            <value>Log Viewer</value>
+        </textarea>
+
+        <shape name="logbackground" from="basebackground">
+            <area>45,90,1830,660</area>
+        </shape>
+
+        <buttonlist name="loglist" from="basebuttonlist">
+            <area>75,120,1747,600</area>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <textarea name="buttontext">
+                        <area>7,0,1710,45</area>
+                    </textarea>
+                    <statetype name="buttoncheck">
+                        <position>1650,7</position>
+                    </statetype>
+                </state>
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonbackground">
+                        <shape name="archivegradient7">
+                            <fill style="gradient">
+                                <gradient start="#52CA38" end="#349838" alpha="255" />
+                            </fill>
+                        </shape>
+                    </imagetype>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <imagetype name="buttonbackground">
+                        <shape name="archivegradient8">
+                            <fill style="gradient">
+                                <gradient start="#52CA38" end="#349838" alpha="100" />
+                            </fill>
+                        </shape>
+                    </imagetype>
+                    <textarea name="buttontext">
+                        <font>basesmallpurple</font>
+                    </textarea>
+                </state>
+            </statetype>
+        </buttonlist>
+
+        <shape name="bottombackground" from="basebackground">
+            <area>45,765,1830,195</area>
+        </shape>
+
+        <textarea name="logitem_text" from="basetextarea">
+            <area>67,772,1785,180</area>
+            <value></value>
+            <multiline>yes</multiline>
+        </textarea>
+
+        <button name="cancel_button" from="basebutton">
+            <position>82,975</position>
+            <value>Cancel</value>
+        </button>
+
+        <button name="update_button" from="basebutton">
+            <position>750,975</position>
+            <value>Update</value>
+        </button>
+
+        <button name="exit_button" from="basebutton">
+            <position>1590,975</position>
+            <value>Exit</value>
+        </button>
+
+    </window>
+
+</mythuitheme>
