@@ -39,18 +39,18 @@
 
         <textarea name="datetext" from="basetextarea">
             <font>baseextrasmall</font>  
-            <area>37,367,285,37</area>
+            <area>37,267,285,37</area>
             <align>top,hcenter</align>
         </textarea>
 
         <textarea name="channelgroup" from="basetextarea">
-            <area>37,405,285,37</area>
+            <area>37,305,285,37</area>
             <align>bottom,hcenter</align>
             <font>basesmallpurple</font>
         </textarea>
 
         <guidegrid name="guidegrid">
-            <area>330,442,1548,592</area>
+            <area>330,342,1548,692</area>
             <!-- <animation trigger="AboutToShow"> -->
             <!--         <section duration="250"> -->
             <!--             <alpha start="0" end="255" easingcurve="OutQuart"/> -->
@@ -82,7 +82,7 @@
         </guidegrid>
 
         <buttonlist name="timelist">
-            <area>330,375,1554,54</area>
+            <area>330,275,1554,54</area>
             <layout>horizontal</layout>
             <spacing>0</spacing>
             <buttonarea>0,0,1554,54</buttonarea>
@@ -132,35 +132,35 @@
         </buttonlist>
 
         <buttonlist name="channellist">
-            <area>37,442,285,597</area>
+            <area>37,342,285,697</area>
             <layout>vertical</layout>
             <spacing>0</spacing>
-            <buttonarea>7,0,285,597</buttonarea>
+            <buttonarea>7,0,285,697</buttonarea>
             <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
             <statetype name="buttonitem">
-                <area>0,0,285,42</area>
+                <area>0,0,285,49</area>
                 <state name="active">
                     <shape name="buttonbackground">
-                        <area>0,0,285,42</area>
+                        <area>0,0,285,49</area>
                         <fill color="#555555" alpha="150" />
                         <type>roundbox</type>
                         <cornerradius>15</cornerradius>
                     </shape>
                     <shape name="channeliconbox" depends="!channelicon">
-                        <area>10,0,88,33</area>
+                        <area>10,0,87,47</area>
                         <type>box</type>
                         <fill color="#000555" alpha="255" />
                         <line color="#FFFFFF" alpha="255" width="0" />
                     </shape>
                     <textarea name="callsign" from="basetextarea" depends="!channelicon">
-                        <area>10,6,82,15</area>
+                        <area>10,15,82,15</area>
                         <font>basetiny</font>
                         <cutdown>no</cutdown>
                         <align>allcenter</align>
                         <multiline>yes</multiline>
                     </textarea>
                     <imagetype name="channelicon">
-                        <area>10,0,88,33</area>
+                        <area>10,0,87,47</area>
                     </imagetype>
                     <!-- Commented out until I add similar effect to OSD -->
                     <!-- <shape name="channeliconcornerbox"> -->
@@ -171,7 +171,7 @@
                     <!--         <cornerradius>9</cornerradius> -->
                     <!-- </shape> -->
                     <textarea name="channelnumber" from="basetextarea">
-                        <area>110,6,157,33</area>
+                        <area>110,15,157,40</area>
                         <font>basetiny</font>
                         <font state="favourite">basetinyyellow</font>
                         <font state="unavailable">basetinublue</font>
@@ -269,7 +269,8 @@
             <area>75,195,1770,145</area>
             <multiline>yes</multiline>
             <align>justify</align>
-            <!-- <template>%LONGREPEAT%%YEARSTARS%%DESCRIPTION%</template> -->
+            <font>baseextrasmall</font>           
+        <!-- <template>%LONGREPEAT%%YEARSTARS%%DESCRIPTION%</template> -->
             <template>%YEARSTARS| %%DESCRIPTION%</template>
         </textarea>
 
@@ -285,7 +286,7 @@
         <!-- </animation> -->
 
         <imagetype name="video">
-            <area>1410,60,450,255</area>
+            <area>1410,5,450,255</area>
         </imagetype>
 
         <shape name="shape1">
@@ -331,18 +332,18 @@
         </shape>
 
         <textarea name="datetext" from="basetextarea">
-            <area>37,367,285,37</area>
+            <area>37,267,285,37</area>
             <align>top,hcenter</align>
         </textarea>
 
         <textarea name="channelgroup" from="basetextarea">
-            <area>37,405,285,37</area>
+            <area>37,305,285,37</area>
             <align>bottom,hcenter</align>
             <font>basesmallpurple</font>
         </textarea>
 
         <guidegrid name="guidegrid">
-            <area>330,442,1548,592</area>
+            <area>330,342,1548,692</area>
             <!-- <animation trigger="AboutToShow"> -->
             <!--         <section duration="250"> -->
             <!--             <alpha start="0" end="255" easingcurve="OutQuart"/> -->
@@ -360,7 +361,7 @@
             <conflictingcolor>#ff6600</conflictingcolor>
             <cutdown>yes</cutdown>
             <multiline>yes</multiline>
-            <textoffset>9,5</textoffset>
+            <textoffset>4,2</textoffset>
             <recordstatus type="SingleRecord" image="shared/gg-rs-single.png"></recordstatus>
             <recordstatus type="TimeslotRecord" image="shared/gg-rs-timeslot.png"></recordstatus>
             <recordstatus type="ChannelRecord" image="shared/gg-rs-channel.png"></recordstatus>
@@ -374,7 +375,7 @@
         </guidegrid>
 
         <buttonlist name="timelist">
-            <area>330,375,1554,54</area>
+            <area>330,275,1554,54</area>
             <layout>horizontal</layout>
             <spacing>0</spacing>
             <buttonarea>0,0,1554,54</buttonarea>
@@ -424,35 +425,35 @@
         </buttonlist>
 
         <buttonlist name="channellist">
-            <area>37,442,285,597</area>
+            <area>37,342,285,697</area>
             <layout>vertical</layout>
             <spacing>0</spacing>
-            <buttonarea>7,0,285,597</buttonarea>
+            <buttonarea>7,0,285,697</buttonarea>
             <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
             <statetype name="buttonitem">
-                <area>0,0,285,42</area>
+                <area>0,0,285,49</area>
                 <state name="active">
                     <shape name="buttonbackground">
-                        <area>0,0,285,42</area>
+                        <area>0,0,285,49</area>
                         <fill color="#555555" alpha="150" />
                         <type>roundbox</type>
                         <cornerradius>15</cornerradius>
                     </shape>
                     <shape name="channeliconbox" depends="!channelicon">
-                        <area>10,0,88,33</area>
+                        <area>10,0,87,47</area>
                         <type>box</type>
                         <fill color="#000555" alpha="255" />
                         <line color="#FFFFFF" alpha="255" width="0" />
                     </shape>
                     <textarea name="callsign" from="basetextarea" depends="!channelicon">
-                        <area>10,6,82,15</area>
+                        <area>10,15,82,15</area>
                         <font>basetiny</font>
                         <cutdown>no</cutdown>
                         <align>allcenter</align>
                         <multiline>yes</multiline>
                     </textarea>
                     <imagetype name="channelicon">
-                        <area>10,0,88,33</area>
+                        <area>10,0,87,47</area>
                     </imagetype>
                     <!-- <shape name="channeliconcornerbox"> -->
                     <!--     <area>9,3,100,78</area> -->
@@ -462,7 +463,7 @@
                     <!--         <cornerradius>9</cornerradius> -->
                     <!-- </shape> -->
                     <textarea name="channelnumber" from="basetextarea">
-                        <area>110,6,157,33</area>
+                        <area>110,15,157,40</area>
                         <font>basetiny</font>
                         <font state="favourite">basetinyyellow</font>
                         <font state="unavailable">basetinyblue</font>
@@ -553,7 +554,8 @@
             <area>60,195,1305,145</area>
             <multiline>yes</multiline>
             <align>justify</align>
-            <!-- <template>%LONGREPEAT%%YEARSTARS%%DESCRIPTION%</template> -->
+            <font>basesupersmall</font>           
+        <!-- <template>%LONGREPEAT%%YEARSTARS%%DESCRIPTION%</template> -->
             <template>%YEARSTARS| %%DESCRIPTION%</template>
         </textarea>
 
