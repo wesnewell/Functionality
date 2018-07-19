@@ -711,11 +711,11 @@
         <buttonlist name="schedules" from="proglistlist"/>
 
         <group name="details" from="detailsgroup">
-            <position>180,690</position>
+            <position>80,690</position>
         </group>
 
         <group name="idstatus" from="idstatusgroup">
-            <position>180,1000</position>
+            <position>80,1000</position>
         </group>
 
         <textarea name="norecordings_info">
@@ -1297,11 +1297,11 @@
         <buttonlist name="proglist" from="proglistlist" />
 
         <group name="details" from="detailsgroup">
-            <position>180,690</position>
+            <position>80,690</position>
         </group>
 
         <group name="idstatus" from="idstatusgroup">
-            <position>180,1000</position>
+            <position>80,1000</position>
         </group>
 
         <textarea name="msg" from="basetextarea">
@@ -1587,7 +1587,7 @@
         </group>
 
         <group name="details" from="detailsgroup">
-            <position>180,670</position>
+            <position>80,670</position>
         </group>
 
         <textarea name="help1text" from="basetextarea">
@@ -2322,11 +2322,11 @@
         </buttonlist>
 
         <group name="details" from="detailsgroup">
-            <position>180,670</position>
+            <position>80,670</position>
         </group>
 
         <group name="idstatus" from="idstatusgroup">
-            <position>180,980</position>
+            <position>80,980</position>
         </group>
 
         <textarea name="nochanges" from="basetextarea">
