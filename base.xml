@@ -1706,7 +1706,7 @@
 
         <group name="detailsgroup">
 
-            <area>180,660,1545,300</area>
+            <area>25,660,1745,300</area>
 
             <shape name="details_background" from="baseboxbackground">
                 <area>0,0,100%,100%</area>
@@ -1735,7 +1735,7 @@
             </textarea>
 
             <textarea name="description" from="basetextarea">
-                <area>10,130,1470,150</area>
+                <area>10,130,1740,150</area>
                 <multiline>yes</multiline>
                 <template>%"|SUBTITLE|" %%00X00| %%(|ORIGINALAIRDATE|)\n%%YEARSTARS| %%DESCRIPTION%</template>
                 <align>justify</align>
