@@ -92,7 +92,7 @@
                 <state name="active">
                     <shape name="buttonbackground">
                         <area>0,0,193,54</area>
-                        <fill color="#333333" alpha="150" />
+                        <fill color="#333333" alpha="200" />
                         <type>roundbox</type>
                         <cornerradius>27</cornerradius>
                     </shape>
@@ -142,14 +142,14 @@
                 <state name="active">
                     <shape name="buttonbackground">
                         <area>0,0,285,49</area>
-                        <fill color="#555555" alpha="150" />
+                        <fill color="#888888" alpha="200" />
                         <type>roundbox</type>
                         <cornerradius>15</cornerradius>
                     </shape>
                     <shape name="channeliconbox" depends="!channelicon">
                         <area>10,0,87,47</area>
                         <type>box</type>
-                        <fill color="#000555" alpha="255" />
+                        <fill color="#000000" alpha="200" />
                         <line color="#FFFFFF" alpha="255" width="0" />
                     </shape>
                     <textarea name="callsign" from="basetextarea" depends="!channelicon">
@@ -211,14 +211,14 @@
             </statetype>
         </buttonlist>
 
-        <shape name="channelnamebox" depends="!channelicon">
+        <shape name="channelnamebox">
             <area>45,30,190,142</area>
             <type>box</type>
-            <fill color="#FFFFFF" alpha="255" />
+            <fill color="#888888" alpha="200" />
             <line color="#FFFFFF" alpha="255" width="0" />
         </shape>
 
-        <textarea name="channelname" from="basetextarea">
+        <textarea name="channelname" depends="!channelicon" from="basetextarea">
             <area>52,37,175,127</area>
             <multiline>yes</multiline>
             <align>center</align>
@@ -385,7 +385,7 @@
                 <state name="active">
                     <shape name="buttonbackground">
                         <area>0,0,193,54</area>
-                        <fill color="#333333" alpha="150" />
+                        <fill color="#333333" alpha="200" />
                         <type>roundbox</type>
                         <cornerradius>27</cornerradius>
                     </shape>
@@ -435,14 +435,14 @@
                 <state name="active">
                     <shape name="buttonbackground">
                         <area>0,0,285,49</area>
-                        <fill color="#555555" alpha="150" />
+                        <fill color="#888888" alpha="200" />
                         <type>roundbox</type>
                         <cornerradius>15</cornerradius>
                     </shape>
                     <shape name="channeliconbox" depends="!channelicon">
                         <area>10,0,87,47</area>
                         <type>box</type>
-                        <fill color="#000555" alpha="255" />
+                        <fill color="#000000" alpha="200" />
                         <line color="#FFFFFF" alpha="255" width="0" />
                     </shape>
                     <textarea name="callsign" from="basetextarea" depends="!channelicon">
@@ -503,14 +503,14 @@
             </statetype>
         </buttonlist>
 
-        <shape name="channelnamebox" depends="!channelicon">
+        <shape name="channelnamebox">
             <area>45,30,190,142</area>
             <type>box</type>
-            <fill color="#FFFFFF" alpha="255" />
+            <fill color="#888888" alpha="200" />
             <line color="#FFFFFF" alpha="255" width="0" />
         </shape>
 
-        <textarea name="channelname" from="basetextarea">
+        <textarea name="channelname" depends="!channelicon" from="basetextarea">
             <area>52,37,175,127</area>
             <multiline>yes</multiline>
             <align>center</align>
@@ -1015,7 +1015,7 @@
                 <state name="active">
                     <shape name="background">
                         <area>0,0,900,150</area>
-                        <fill color="#FFFFFF" alpha="180" />
+                        <fill color="#FFFFFF" alpha="200" />
                     </shape>
                 </state>
                 <state name="selected" from="active">
@@ -1805,7 +1805,7 @@
                 <state name="active">
                     <shape name="background">
                         <area>0,0,1620,225</area>
-                        <fill color="#FFFFFF" alpha="180" />
+                        <fill color="#FFFFFF" alpha="200" />
                     </shape>
                 </state>
                 <state name="selected" from="active">
@@ -1838,7 +1838,7 @@
                 <state name="active">
                     <shape name="background">
                         <area>0,0,1320,127</area>
-                        <fill color="#FFFFFF" alpha="180" />
+                        <fill color="#FFFFFF"  />
                     </shape>
                 </state>
                 <state name="selected" from="active">
