@@ -427,6 +427,18 @@
                     <filename>osd/resolution/1080.png</filename>
                 </imagetype>
             </state>
+            <state name="UHD_4K_I">
+                <imagetype name="hd1080">
+                    <area>0,0,97,37</area>
+                    <filename>osd/resolution/2160.png</filename>
+                </imagetype>
+            </state>
+            <state name="UHD_4K_P">
+                <imagetype name="hd1080">
+                    <area>0,0,97,37</area>
+                    <filename>osd/resolution/2160.png</filename>
+                </imagetype>
+            </state>
         </statetype>
 
         <statetype name="videocodec">
